@@ -1,0 +1,66 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block title %} Sentiment Classification {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img id="logo" src="../static/images/logo.png"/>
+        <div class="menu">
+            <a href="/">Write a text </a>
+            <a href="/upload">Upload a file</a>
+            <a href="/aboutus">About us</a>
+
+        </div>
+    </div>
+
+
+   
+    <div class="content">
+            <div class="card-body input-card-body1" style="text-align: center;">
+
+                    
+                    {% if filecard=="results" %}
+                    <h2 class="results2">Your results are ready! </h2> 
+                    <form action="/download-lang/{{ langs }}" method="POST">
+                        <input type="submit" class="btn btn-success dwn" id="dwn1" value="Download language identification results">
+                    </form>
+                    <form action="/download-sent/{{ sents }}" method="POST">
+                        <input type="submit" class="btn btn-success dwn" id="dwn2" value="Download sentiment analysis results">
+                    </form>
+
+                </div>
+                <form action="/upload" method="POST">
+                    <input type="submit" id="upload" class="btn btn-success"value="Upload a new file">
+                </form>
+                    
+                    {% else %}
+
+                    <form method="POST" action="/file" enctype = "multipart/form-data">
+                            <div class="input-group">
+                                <h2 class="upload"> Upload your file here: </h2>
+                                <div id="file-field"> <input type="file" class="form-control-file" name="file" id="file"> </div>
+                                <div class="input-group-append" >
+                                    <input type="submit" class="btn  btn-success"  id="submit-file" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    {% endif %}
+                
+        
+    </div>
+   
+          
+{% endblock %}

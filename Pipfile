@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-bootstrap = "*"
+langdetect = "*"
+scikit-learn = "==0.20.2"
+pandas = "*"
+matplotlib = "*"
+nltk = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

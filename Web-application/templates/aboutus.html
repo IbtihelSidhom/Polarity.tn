@@ -1,0 +1,67 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block title %} Sentiment Classification {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img id="logo" src="../static/images/logo.png"/>
+        <div class="menu">
+            <a href="/">Write a text </a>
+            <a href="/upload">Upload a file</a>
+            <a href="/aboutus">About us</a>
+
+        </div>
+    </div>
+
+   
+    <div class="content">
+            <div class="card-body-aboutus input-card-body1" style="text-align: center;">
+                    <div class="profiles">
+                            <div id="ibti">
+                                    <img class="photo" src="../static/images/ibti.png"/>
+                                    <div class="name"> Ibtihel Sidhom </div>
+                                    <div class="logos"> 
+                                            <a href="https://www.linkedin.com/in/ibtihel-sidhom/" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/linkedin.png"></span></a>
+                                            <a href="https://github.com/IbtihelSidhom" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/git.png" /></span></a>
+                                        </div>
+                                </div>
+                            <div id="aklom">
+                                <img class="photo" src="../static/images/molka.png"/>
+                                <div class="name"> Molka Zaouali </div>
+                                <div class="logos"> 
+                                        <a href="https://www.linkedin.com/in/molka-zaouali/" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/linkedin.png"></span></a>
+                                        <a href="https://github.com/aklom" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/git.png" /></span></a>
+            
+                                </div>
+            
+                            </div>
+                            <div id="tay">
+                                    <img class="photo" src="../static/images/tay.png"/>
+                                    <div class="name"> Taysir Ben Hamed </div>
+                                    <div class="logos"> 
+                                            <a href="https://www.linkedin.com/in/taysir-ben-hamed-78965b160/" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/linkedin.png"></span></a>
+                                            <a href="https://github.com/IbtihelSidhom" rel="noreferrer noopener" target="_blank"><span><img src="../static/images/git.png" /></span></a>
+                                        </div>
+                                </div>
+                            
+                        </div> 
+                        <div class="note"> </div>
+           
+                </div>
+
+        
+    </div>
+   
+          
+{% endblock %}

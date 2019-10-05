@@ -1,0 +1,284 @@
+
+@font-face{
+    font-family: highland;
+    src: url('Prototype.ttf');
+    
+}
+
+.results2 {
+    margin-top: 15vh;
+}
+
+body {
+    font-family: highland;
+}
+.type {
+    font-family: highland; 
+    color: black;
+    margin-left: 5vw;
+    margin-top: 30%; 
+
+}
+
+.upload {
+    font-family: highland; 
+    color: black;
+    margin-top: 30%;
+
+}
+.content {
+    height: 85vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+body {
+    background-image: url("../images/seed.jpg");
+    background-size: 100% 100%;
+}
+
+.card-body {
+    box-shadow: 1px 3px 10px 3px rgba(0, 0, 0, 0.5);
+    height: 60vh;
+    width: 36.5vw;
+    overflow-y: auto;
+    background-color: #e8e8e8aa;
+}
+
+
+#input-text {
+    margin-top: 2%; 
+    margin-left: 8%;
+}
+
+#submit-text {
+    margin-top: 5.5%; 
+    margin-left: 16%;
+    width: 7vw;
+    font-size: 2.5vh;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    border-radius: 2vh;
+    font-family: highland;
+}
+
+
+
+#file-field {
+    background-color: white;
+    height: 15vh;
+    width: 30vw; 
+    margin-left: 15%;
+    border: solid 0.6px rgb(190, 187, 187);
+}
+
+#file {
+    font-size: 2.3vh;
+    padding: 5vh;
+}
+
+#submit-file {
+    margin-top: 5%; 
+    margin-left: 27%;
+    width: 7vw;
+    font-size: 2.5vh;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 2vh;
+    color: white;
+    font-family: highland;
+}
+
+.mylabel {
+    color: black; 
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: highland;
+
+}
+
+.label2 {
+    color: black; 
+    font-size: 3vh;
+    font-weight: bold;
+    float: right;
+    margin-right: 5vw;
+}
+.display-input-text {
+    padding-top: 4vh;
+    height: auto;
+    color: black;
+    font-size: 3vh;
+    font-family: highland;
+}
+
+.display-language {
+    padding-top: 5vh;
+    color: black;
+    font-size: 3vh;
+    font-family: highland;
+}
+
+.display-sentiment {
+    padding-top: 5vh;
+    color: black;
+    font-size: 3vh;
+    font-family: highland;
+
+}
+
+.display-message {
+    text-align: center; 
+    margin-left: 7vw; 
+    margin-right: 7vw;
+    margin-top: 1vh;
+    font-size: 2vh;
+    color: black;
+    font-size: 3vh;
+    
+}
+
+#another-text {
+    margin-top: 5vh; 
+    margin-left: 0;
+    width: 14vw;
+    font-size: 2.5vh;
+    background-color: black;
+    border: 1px solid rgba(250, 215, 14, 1);
+    border-radius: 2vh;
+    color: rgba(250, 215, 14, 1);
+}
+
+.helpus{
+    text-align: center;
+    padding-bottom: 3vh;
+    padding-top: 2vh;
+}
+
+.btn-skip {
+    background-color: #5ab7e2;
+    color: white;
+    width: 8vw;
+}
+
+
+.btn-save {
+    background-color: orange;
+    color: white;
+    float: right;
+    width: 8vw;
+}
+
+#helpus-lang, #helpus-sentiment {
+    padding-left: 4vw;
+    padding-top: 3vh;
+}
+
+.modal-footer {
+    margin-top: 5vh;
+}
+
+
+#dwn1, #dwn2{
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 2vh;
+    color: #ffffff;
+    font-size: 2.5vh;
+    
+} 
+
+#dwn1 {
+    margin-top: 6vh;
+}
+
+#dwn2 {
+    margin-top: 6vh;
+}
+
+.input-card-body2 {
+    text-align: center;
+}
+
+#upload{
+    background-color: black;
+    border: 1px solid rgba(50, 170, 207, 1);
+    border-radius: 2vh;
+    color: rgba(50, 170, 207, 1);
+    margin-left: 0;
+    margin-top: 5vh;
+    font-size: 2.5vh;
+}
+
+.banner {
+    background-color: #e8e8e8;
+    height: 15vh;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
+#logo {
+    height: 15vh;
+}
+
+.menu {
+    float: right;
+    padding-right: 5vw;
+    padding-left: 40vw;
+}
+
+.menu a {
+    padding: 5vh 2vw;
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.card-body-aboutus {
+    box-shadow: 1px 3px 10px 3px rgba(0, 0, 0, 0.5);
+    height: 45vh;
+    width: 60vw;
+    overflow-y: hidden;
+    background-color: #e8e8e8cc;
+
+}
+
+.profiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#aklom , #ibti, #tay {
+    float: left;
+    color: black;
+    margin: 6vh 8vh;
+    font-size: 2vh;
+}
+
+.name {
+    font-size: 3vh;
+
+}
+
+.photo {
+    width: 20vh;
+    margin: 1vh 0vh;
+
+}
+
+.logos img {
+    width: 5vh;
+    margin: 1vh;
+    
+}
+
+.note {
+    font-size: 2.5vh;
+    padding: 0 10vw;
+}
