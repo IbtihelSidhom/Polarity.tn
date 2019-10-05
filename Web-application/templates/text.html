@@ -1,0 +1,109 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+{{super()}}
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/index.css') }}">
+  <link rel="icon" href="../static/images/favicon.png">
+
+{% endblock %}
+
+{% block title %} Sentiment Classification {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img id="logo" src="../static/images/logo.png"/>
+        <div class="menu">
+            <a href="/">Write a text </a>
+            <a href="/upload">Upload a file</a>
+            <a href="/aboutus">About us</a>
+
+        </div>
+    </div>
+
+
+   
+    <div class="content">
+            <div class="card-body input-card-body1" style="text-align: center;">
+
+                    
+                    {% if textcard == "results" %}
+                    <h2 style="text-align: center; padding-top: 5vh; color: black;"> Results of our prediction </h2>
+                    <div class="display-input-text"> 
+                        <div> <span class="mylabel"> Message </span> </div><div class="display-message"> {{ message }} </div>
+                    </div>
+                    <div class="display-language"> 
+                        <div><span class="mylabel"> Predicted language </span></div> <div> {{ lang }} </div>
+                        <!--<div class="label2"><span color="grey"> Accuracy </span> 0.87 </div>-->
+                    </div>
+                    <div class="display-sentiment"> 
+                        <div><span class="mylabel"> Predicted polarity </span></div><div> {{ sent }} </div>
+                        <!--<div class="label2"><span color="grey" > Accuracy: </span> 0.65 </div>-->
+                    </div>
+            </div>
+                     <div><input class="btn btn-success" id="another-text" data-toggle="modal" data-target="#mymodal" value="Try another message"></div>
+                {% else %}
+                <form method="POST" action="/text">
+                    <div class="input-group">
+                        <h2 class="type"> Type your message here: </h2>
+                        <textarea rows="4" cols="50" dir="rtl" class="form-control" type="text" name="input-text" id="input-text"></textarea>
+                        <div class="input-group-append" >
+                            
+                            <input type="submit" class="btn btn-success" id="submit-text" value="Submit">
+                        </div>
+                    </div>
+                </form> 
+    </div>          
+                {% endif %}
+                
+          
+    </div>
+    <form action="/review" method="POST">
+    <div class="modal" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3 class="helpus"> Help us improve our machine learning prediction model</h3>
+                    <div id="helpus-lang">
+                        Are the results of the Language identification prediction: 
+                        <select class="custom-select" id="lang" name="lang_review">
+                            <option selected> Choose </option>
+                            <option value="ok">Correct</option>
+                            <option value="no">Incorrect</option>
+                        </select> ?
+                    </div>
+                    <div id="helpus-sentiment">
+                            Are the results of the Sentiment analysis prediction: 
+                            <select class="custom-select" id="sent" name="sent_review">
+                                <option selected> Choose </option>
+                                <option value="ok">Correct</option>
+                                <option value="no">Incorrect</option>
+                            </select> ?
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="message" value="{{ message }}">
+                    <input type="hidden" name="lang" value="{{ lang }}"> 
+                    <input type="hidden" name="sent" value="{{ sent }}"> 
+                    
+                    <a class="btn btn-skip" href="/"> Skip </a>
+                    
+                    <input type="submit" class="btn btn-save" value="Save changes">
+                </div>
+              </div>
+            </div>
+          </div>
+          </form>
+          
+{% endblock %}
