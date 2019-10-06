@@ -1,7 +1,7 @@
 # Polarity.tn
 
 
-<b> Realized by [Ibtihel Sidhom](https://github.com/IbtihelSidhom), [Molka Zaouali](https://github.com/aklom) and [Taysir Ben Hamed](https://github.com/TaysirBenHamed) in December 2018  </b>
+<b> Realized by [Ibtihel Sidhom](https://github.com/IbtihelSidhom), [Molka Zaouali](https://github.com/aklom) and [Taysir Ben Hamed](https://github.com/TaysirBenHamed) in December 2018 :computer: </b>
 
 ## Getting started !
 
