@@ -104,3 +104,6 @@ Based on this evaluation, this data will be stored in a file to be added to the 
   <img src="https://user-images.githubusercontent.com/28828162/66261555-7c370700-e7c7-11e9-9301-89b0837f6985.png" width="700"/> 
 </p>
 
+</br>
+
+The amazing background is by the awesome street artist [El Seed](https://elseed-art.com/).
