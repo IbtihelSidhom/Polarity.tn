@@ -10,25 +10,17 @@ tun_corpus_files = [ './corpus_files/sentiment_data_TUN_pos.txt', './corpus_file
 
 
 def read_text_file(filename):
-    print('Reading file ' + filename + "...")
+    print("Reading file " + filename + "...")
     with open(BASE_DIR + "/" + filename, "r", encoding='utf8') as textfile:
-        L = []
-        for line in textfile:
-            L.append(line.strip())
-        print('File contains ', len(L), "lines.\n")
-        return L
+        lines = (line.strip() for line in textfile)
+   
+    print("File contains f{len(L)} lines.\n")
+    yield lines
 
-
-ara_corpus_pos = read_text_file(ara_corpus_files[0])
-ara_corpus_neg = read_text_file(ara_corpus_files[1])
-
-tun_corpus_pos = read_text_file(tun_corpus_files[0])
-tun_corpus_neg = read_text_file(tun_corpus_files[1])
-
-ara_corpus = ara_corpus_pos + ara_corpus_neg
+ara_corpus = [*read_text_file(ara_corpus_files[i]) for i in range(2)]
 ara_corpus_sentiment = len(ara_corpus_pos)*[1] + len(ara_corpus_neg)*[-1]
 
-tun_corpus = tun_corpus_pos + tun_corpus_neg
+tun_corpus = [*read_text_file(tun_corpus_files[i]) for i in range(2)]
 tun_corpus_sentiment = len(tun_corpus_pos)*[1] + len(tun_corpus_neg)*[-1]
 
 """
